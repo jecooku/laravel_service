@@ -1,0 +1,36 @@
+---
+ip: "192.168.10.11"
+memory: 2048
+cpus: 1
+hostname: service
+name: service
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "C:/Users/Jorge/OneDrive/Documents/Projects/Laravel/Service"
+      to: "/home/vagrant/service"
+
+sites:
+    - map: service.app
+      to: "/home/vagrant/service/public"
+
+databases:
+    - service
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
