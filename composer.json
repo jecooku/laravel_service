@@ -6,7 +6,9 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.2.*"
+        "laravel/framework": "5.2.*",
+        "laravelcollective/html": "5.2.*",
+        "twbs/bootstrap": "^3.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -46,6 +48,8 @@
         ]
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "component-dir": "public/assets",
+        "component-baseurl": "/assets"
     }
 }
